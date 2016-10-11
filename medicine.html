@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>各科医生</title>
+<link href="css/seconddoctor.css" rel="stylesheet" type="text/css">
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js" ></script>
+	<script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.js"></script>
+</head>
+<body>
+<!-- 代码 开始 -->
+<div class="head">
+	<div class="head-1">
+		<ul>
+	    <a  class="dot dot1 ">不限</a>
+		<a class="dot dot2">妇科</a>
+		<a class="dot dot3">儿科</a>
+		<a class="dot dot4">男科</a>
+		<a class="dot dot5">成人</a>
+		<a class="dot dot6">老年</a>
+		</ul>
+	</div>	
+</div>
+<div class="banner">
+	<ul>
+		<li><img src="images/medicine1.jpg" width="1000" height="600"  /></li>
+		<li><img src="images/medicine2.jpg" width="1000" height="600"  /></li>
+		<li><img src="images/medicine3.jpg" width="1000" height="600"  /></li>
+		<li><img src="images/medicine1.jpg" width="1000" height="600" /></li>
+		<li><img src="images/medicine2.jpg" width="1000" height="600"  /></li>
+		<li><img src="images/medicine3.jpg" width="1000" height="600"/></li>
+	</ul>
+	
+</div>
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/seconddoctor.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> 
+<script type="text/javascript">
+$(function(){
+	$('.banner').unslider({arrows:true,dots:true});
+	$('.banner .dots').eq(1).hide();
+	$('.banner .dot').mouseover(function(){
+		$(this).closest('.banner').find('ul').stop();
+		
+	});
+	$('.banner').hover(function(){
+		$(this).toggleClass('hover');
+	});
+});
+$(".dot1").click(function(){
+  	  		$.ajax({
+   			type:  "POST",
+   			url:"php/a.php",
+   			data: {
+				classify: "1",
+				
+			},
+
+   			dataType: "json",
+     
+   		})
+
+   	window.location.href="medicine1.html";
+})
+$(".dot2").click(function(){
+  	  		$.ajax({
+   			type:  "POST",
+   			url:"php/a.php",
+   			data: {
+				classify: "2",
+				
+			},
+
+   			dataType: "json",
+     
+   		})
+   	window.location.href="medicine1.html";
+})
+$(".dot3").click(function(){
+  	  		$.ajax({
+   			type:  "POST",
+   			url:"php/a.php",
+   			data: {
+				classify: "3",
+				
+			},
+
+   			dataType: "json",
+     
+   		})
+   		window.location.href="medicine1.html";
+})
+$(".dot4").click(function(){
+  	  		$.ajax({
+   			type:  "POST",
+   			url:"php/a.php",
+   			data: {
+				classify: "4",
+				
+			},
+
+   			dataType: "json",
+     
+   		})
+   		window.location.href="medicine1.html";
+})
+$(".dot5").click(function(){
+  	  		$.ajax({
+   			type:  "POST",
+   			url:"php/a.php",
+   			data: {
+				classify: "5",
+				
+			},
+
+   			dataType: "json",
+     
+   		})
+   		window.location.href="medicine1.html";
+})
+$(".dot6").click(function(){
+  	  		$.ajax({
+   			type:  "POST",
+   			url:"php/a.php",
+   			data: {
+				classify: "6",
+				
+			},
+
+   			dataType: "json",
+     
+   		})
+   		window.location.href="medicine1.html";
+})
+</script>
+
+<!-- 代码 结束 -->
+
+<div style="text-align:center;">
+</div>
+</body>
+</html>

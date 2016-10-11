@@ -1,0 +1,107 @@
+html{
+	background:-webkit-linear-gradient(right,#ace6e6,#66cccc,#ace6e6,#66cccc,#ace6e6,#66cccc,#ace6e6);
+	font-family: "微软雅黑";
+}
+.main{
+	position: relative;
+	width: 1000px;
+	margin: 0 auto;
+	top: 100px;
+}
+#button{
+	position: absolute;
+	left:70px;
+	width: 800px;
+	
+}
+.m3{
+	
+	position: absolute;
+	background-color: rgb(242,252,254);
+	color:#000000;
+	top: 50px;
+	left:70px;
+	width:800px ;
+	height: 400px;
+	opacity: 0.9;
+
+}
+input[type=submit]{
+	background-color: #2f889a;
+	color: white;
+	font-size: 17px;
+	height: 40px;
+	font-family: "微软雅黑";
+}
+input[type=text]{
+	height: 30px;
+	font-size: 13px;
+	font-family: "微软雅黑";
+}
+.m4{
+	position: absolute;
+	background-color: rgb(242,252,254);
+	left:70px;
+	top: 50px;
+	width:800px ;
+	height: 400px;
+	display: none;
+}
+.m5{
+	position: absolute;
+	background-color: #FFFFFF;
+	left:70px;
+	top: 50px;
+	width:800px ;
+	height: 400px;
+	opacity: 0.9;
+}
+.m6{
+	position: absolute;
+	top: 50px;
+	left:70px;
+	width:800px ;
+	height: 400px;
+	background-color: rgb(242,252,254);
+	
+	display: none;
+}
+button{
+	float: left;
+	width: 200px;
+	left:70px;
+	height: 50px;
+	color: #0ea9eb;
+	background-color: #FFFFFF;
+	font-size: 20px;
+}
+body{
+	  
+
+	 color: #FFFFFF;
+	
+}
+.m6 form{
+	margin-top: 50px;
+}
+.m6 input{
+	display: block;
+	width: 500px;
+	border: 1px solid #d2d8d8;
+	border-radius: 5px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+.m3 p
+{
+	display: block;
+	width: 500px;
+	height: 30px;
+	border-radius: 8px;
+	font-size: 20px;
+	margin:  auto;
+}
+.context_1
+{
+	margin-top:100px;
+}

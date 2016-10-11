@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>医生的个人界面</title>
+		<link rel="stylesheet" type="text/css" href="css/personal.css"/>
+		<script src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
+	</head>
+		<div class="main">
+			<div id="button">
+              <div class="m_1">
+	            <button id="buttons11" value="1">我的个人信息</button>	         
+              </div>	
+              <div class="m_2">
+	             <button value="2">想要预约你的人</button>
+	             
+              </div>
+              <div class="m_3">
+	             <button value="2">你同意预约的人</button>
+              </div>
+                <div class="m_4">
+	             <button value="2">修改个人信息</button>
+              </div>
+              </div>
+              <div class="m3">
+              <div class="context_1">
+              <p id="r1"></p>
+              <p id="r2"></p>
+              <p id="r3"></p>
+              <p id="r4"></p>
+              <p id="r5"></p>
+              </div>
+              </div>
+              <div class="m4">
+              <p class="r"></p>
+              <p class="r"></p>
+              <p class="r"></p>
+              <p class="r"></p>
+              <p class="r"></p>
+
+              </div>
+              <div class="m5">
+              <p class="t"></p>
+              <p class="t"></p>
+              <p class="t"></p>
+              <p class="t"></p>
+              <p class="t"></p>
+              </div>
+              <div class="m6">
+              	<form>
+              		<input type="text" placeholder="请输入要修改的用户名" id="xiu0"/>
+              		<input type="text" placeholder="请输入要修改的密码" id="xiu1"/>
+              		<input type="text" placeholder="请确定要修改的密码"id="xiu2"/>
+              		<input type="text" placeholder="请输入要修改的手机号"id="xiu3"/>
+              		<input type="text" placeholder="请输入要修改的医生类型"id="xiu4"/>
+              		<input type="text" placeholder="请输入要修改的邮箱"id="xiu5"/> 
+              		<input type="submit"  value="确定修改" id="butt"/>        
+              	</form>
+              </div>
+		</div>
+		
+		<script type="text/javascript">
+	       $(".m_1").click(
+	       	function()
+	       	{
+	       	   $(".m4").hide();
+	       	   $(".m3").hide();
+	       	   $(".m5").hide();
+	       	   $(".m6").hide();
+	       	   $(".m3").slideDown();
+	       	}
+	       );
+	       $(".m_2").click(
+	       	function()
+	       	{
+	       	   $(".m4").hide();
+	       	   $(".m3").hide();
+	       	   $(".m5").hide();
+	       	   $(".m6").hide();
+	       	   $(".m4").slideDown();
+	       	}
+	       );
+	        $(".m_3").click(
+	       	function()
+	       	{
+	       	   $(".m4").hide();
+	       	   $(".m3").hide();
+	       	   $(".m5").hide();
+	       	   $(".m6").hide();
+	       	   $(".m5").slideDown();
+	       	}
+	       );
+	        $(".m_4").click(
+	       	function()
+	       	{
+	       	   $(".m4").hide();
+	       	   $(".m3").hide();
+	       	   $(".m5").hide();
+	       	   $(".m6").hide();
+	       	   $(".m6").slideDown();
+	       	}
+	       );
+	       $(document).ready(function(){
+  	  		$.ajax({
+   			type:  "POST",
+   			url:"php/D_information.php",
+   			dataType: "json",
+			 success: function(data){
+               var obj = eval(data); 
+               $("#xiu0").val("用户名："+obj[0][0]);
+               $("#xiu3").val("手机号："+obj[0][2]);
+               $("#xiu4").val("医生类型："+obj[0][3]);
+               $("#xiu5").val("邮箱："+obj[0][1]);
+               $("#r1").html("用户名："+obj[0][0]);
+               $("#r2").html("手机号："+obj[0][2]);
+               $("#r3").html("医生类型："+obj[0][3]);
+               $("#r4").html("邮箱："+obj[0][1]);
+               var b=$(".r");              
+               for(var i=0;i<obj[1].length;i++)
+               {
+               	b[i].innerHTML=obj[1][i];
+               }
+               var c=$(".t");
+              for(var i=0;i<obj[2].length;i++)
+               {
+               	c[i].innerHTML=obj[2][i];
+               }
+	             
+	                                    }
+		
+   		})
+  }) 
+		</script>
+	</body>
+</html>
