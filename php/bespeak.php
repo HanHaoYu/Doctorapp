@@ -17,5 +17,5 @@ if($row1 && $row2) {
 else {
     echo "failed";
 }
-header('Location:http://localhost:81/Doctor/mian.html');
+header('Location:http://localhost:81/Doctor/index.html');
 ?>

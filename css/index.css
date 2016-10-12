@@ -1,0 +1,23 @@
+body{
+	margin:0;
+}
+#all{
+	width:750px;
+	height:1250px;
+	background-color:#eeeeee;
+	overflow:hidden;
+}
+.index_logo{
+	height:95px;
+	width:100%;
+	background-color:#00bfff;
+}
+.index_logo a{
+	text-decoration:none;
+	position:relative;
+	float:right;
+	padding-right:40px;
+	color:#ffffff;
+	font-size:43px;
+	line-height:95px;
+}

@@ -85,11 +85,11 @@ jQuery(document).ready(function($){
 			function animate(offset){
 				var newleft=parseInt(list.style.left) + offset;
 				list.style.left=newleft + 'px';
-				if(newleft > -750){
-					list.style.left = -2250 +'px';
+				if(newleft > -370){
+					list.style.left = -1110 +'px';
 				}
-				if(newleft < -2250){
-					list.style.left = -750 +'px';
+				if(newleft < -1110){
+					list.style.left = -370 +'px';
 				       }
 				 }
             function play(){
@@ -108,7 +108,7 @@ jQuery(document).ready(function($){
 					index+=1;
 				}
 				showButton();
-				animate(-750);
+				animate(-370);
 			}
 			prev.onclick = function(){
 				if(index==1){
@@ -118,7 +118,7 @@ jQuery(document).ready(function($){
 					index-=1;
 				}
 				showButton();
-				animate(750);
+				animate(370);
 			}
 			for(var i=0;i<buttons.length;i++){
 				buttons[i].onclick=function(){
@@ -126,7 +126,7 @@ jQuery(document).ready(function($){
 						return;
 					}
 					var myindex=parseInt(this.getAttribute('index'));
-					var offset=-750*(myindex-index);
+					var offset=-370*(myindex-index);
 					animate(offset);
 					index=myindex;
 					showButton();
